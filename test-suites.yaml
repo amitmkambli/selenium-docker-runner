@@ -3,7 +3,9 @@ services:
   vendor-portal:
     image: amitdocker369/selenium
     environment:
-    - BROWSER=chrome
+    # we can keep below line as '- BROWSER' since we have BROWSER in .env file and Jenkins will assume BROWSER=${BROWSER} 
+    # if the parameter is missing below
+    - BROWSER=${BROWSER}
     - HUB_HOST=hub    
     - THREAD_COUNT=1
     - TEST_SUITE=vendor-portal.xml
@@ -12,7 +14,7 @@ services:
   flight-reservation:
     image: amitdocker369/selenium
     environment:
-    - BROWSER=chrome
+    - BROWSER=${BROWSER}
     - HUB_HOST=hub    
     - THREAD_COUNT=1
     - TEST_SUITE=flight-reservation.xml
