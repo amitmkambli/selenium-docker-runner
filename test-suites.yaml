@@ -12,7 +12,7 @@ services:
   flight-reservation:
     image: amitdocker369/selenium
     environment:
-    - BROWSER=firefox
+    - BROWSER=chrome
     - HUB_HOST=hub    
     - THREAD_COUNT=1
     - TEST_SUITE=flight-reservation.xml
