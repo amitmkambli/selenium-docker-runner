@@ -10,11 +10,11 @@ services:
     deploy:
       replicas: 1
     env_file: .env
-  firefox:
-    image: selenium/node-firefox:4.18.1-20240224
-    shm_size: '2g'
-    depends_on:
-    - hub
-    deploy:
-      replicas: 0
-    env_file: .env
+  # firefox:
+  #   image: selenium/node-firefox:4.18.1-20240224
+  #   shm_size: '2g'
+  #   depends_on:
+  #   - hub
+  #   deploy:
+  #     replicas: 1
+  #   env_file: .env
